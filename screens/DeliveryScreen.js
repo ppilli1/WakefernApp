@@ -8,6 +8,7 @@ import { XCircleIcon, XMarkIcon } from "react-native-heroicons/outline";
 import * as Progress from "react-native-progress";
 import MapView, { Marker } from "react-native-maps";
 import { SafeAreaView as SafeViewNormal } from "react-native";
+import {Icon} from "react-native-elements"
 
 const DeliveryScreen = () => {
   const navigation = useNavigation();
@@ -20,8 +21,12 @@ const DeliveryScreen = () => {
           <TouchableOpacity onPress={() => navigation.navigate("Home")}>
             <XMarkIcon color="white" size={30} />
           </TouchableOpacity>
-
-          <Text className="font-light text-white text-lg">Order Help</Text>
+          <Icon
+            name = "arrowright"
+            className = "bg-black rounded-full w-10 ml-10"
+            color = "white"
+            type = "antdesign"
+          />
         </View>
 
         <View className="bg-white mx-5 my-2 rounded-md p-6 z-50 shadow-md">

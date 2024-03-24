@@ -1,9 +1,10 @@
 // remote packages imports
-import { View, Text, Image, TextInput, ScrollView } from "react-native";
+import { View, Text, Image, TextInput, ScrollView, TouchableOpacity } from "react-native";
 import React, { useEffect, useLayoutEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import sanityClient from "../sanity";
+import { Icon } from "react-native-elements";
 
 // icons imports
 import {
@@ -68,7 +69,16 @@ const HomeScreen = () => {
           </Text>
         </View>
 
-        <UserIcon size={35} color="#00CCBB" />
+        {/*<UserIcon size={35} color="#00CCBB" />*/}
+        <TouchableOpacity onPress = {() => navigation.navigate("AIScreen")}>
+        <Icon
+          style = {{borderColor: "#00CCBB", borderWidth: 3}}
+          className = "borderColor-[#00CCBB] rounded-full w-10 h-10 justify-center"
+          name = "robot"
+          color = "#00CCBB"
+          type = "material-community"
+        />
+        </TouchableOpacity>
       </View>
 
       {/* Search */}
